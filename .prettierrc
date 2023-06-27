@@ -1,0 +1,12 @@
+{
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "jsxBracketSameLine": true,
+  "importOrder": ["classnames", "^constants/(.*)", "^types/(.*)", "^hooks/(.*)", "^components/(.*)", "^modules/(.*)",  "^pages/(.*)", "^router/(.*)",  "^store/(.*)", "^assets/(.*)$", "^[../]", "^[./]", "^(.*\\/css$)", "^(.*\\.css$)"],
+  "importOrderSortSpecifiers": true,
+  "importOrderSeparation": true,
+  "endOfLine": "auto"
+}
