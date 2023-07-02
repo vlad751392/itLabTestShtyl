@@ -1,3 +1,11 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,165 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'DroidSans';
+  src: local('DroidSansBold'),
+    url('assets/fonts/DroidSans/DroidSans-Bold.ttf')
+      format('truetype');
+      font-weight: 700;
+}
+
+@font-face {
+  font-family: 'DroidSans';
+  src: local('DroidSansRegular'),
+    url('assets/fonts/DroidSans/DroidSans.ttf')
+      format('truetype');
+      font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('LatoLight'),
+    url('assets/fonts/Lato/Lato-Light.ttf')
+      format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('LatoRegular'),
+    url('assets/fonts/Lato/Lato-Regular.ttf')
+      format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('LatoBold'),
+    url('assets/fonts/Lato/Lato-Bold.ttf')
+      format('truetype');
+      font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('LatoBlack'),
+    url('assets/fonts/Lato/Lato-Black.ttf')
+      format('truetype');
+      font-weight: 900;
+}
+
+.home-slider .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  @apply bg-blue-primary;
+  @apply border-transparent;
+}
+
+.home-slider .swiper-pagination-bullet {
+  @apply bg-transparent;
+  @apply w-4;
+  @apply h-4;
+  @apply border-2;
+  @apply opacity-100;
+  @apply border-white;
+}
+
+button.primary-button,
+button.secondary-button {
+  transition: transform 0.15s;
+  transform-style: preserve-3d;
+}
+
+button.primary-button::before,
+button.secondary-button::before{
+  position: absolute;
+  @apply rounded-lg;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button.primary-button::before {
+  @apply bg-blue-dark;
+  @apply shadow-primary-button-shadow;
+}
+
+button.secondary-button::before {
+  @apply bg-gray-dark;
+  @apply shadow-secondary-button;
+}
+
+button.primary-button:hover, 
+button.secondary-button:hover {
+  transform: translate(0, 0.25em);
+}
+
+
+button.primary-button:hover::before,
+button.secondary-button:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.primary-button:hover::before {
+  @apply shadow-primary-button-shadow;
+}
+
+button.secondary-button:hover::before {
+  @apply shadow-secondary-button;
+}
+
+
+button.primary-button:active,
+button.secondary-button:active {
+  background: transparent;
+  transform: translate(0em, 0.75em);
+}
+button.primary-button:active::before,
+button.secondary-button:active::before {
+  background: transparent;
+  box-shadow: 0 0 0 0 transparent, 0 0 transparent;
+  transform: translate3d(0, 0, -1em);
+}
+
+button.secondary-button:active {
+  @apply text-white;
+}
+
+#home {
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  header ul {
+    @apply absolute;
+    @apply top-full;
+    @apply w-full;
+    @apply bg-black/70;
+    @apply h-fit;
+    display: none;
+  }
+
+  header ul li{
+    @apply my-2;
+    @apply justify-center
+  }
+
+  header .hide {
+    @apply animate-close-menu;
+  }
+
+  header .wrapper {
+    @apply absolute;
+    @apply w-full;
+    @apply top-full;
+    @apply overflow-hidden;
+    height: 300%;
+  }
+
 }
