@@ -65,7 +65,7 @@ export const Contact: FC = () => {
       style={containerStyle}>
       <section className="mx-auto w-full sm:w-fit bg-blue-primary/80">
         <form onSubmit={handleSubmit(onSubmit)} className="pb-11">
-          <h2 className="text-5xl py-11">
+          <h2 className="text-5xl py-11 text-white">
             <b>Contact</b>
           </h2>
           {inputs.map((input) => (
@@ -81,7 +81,10 @@ export const Contact: FC = () => {
             />
           ))}
 
-          <Button type="submit" className="" variant={ButtonVariants.SECONDARY}>
+          <Button
+            type="submit"
+            className="sm:w-52 2xl:py-4 py-3 w-4/5"
+            variant={ButtonVariants.SECONDARY}>
             Send
           </Button>
           {showMessage && isValid && (

@@ -35,7 +35,7 @@ export const Watch = () => {
   return (
     <article
       id="watch"
-      className="pb-28 pt-52 bg-no-repeat bg-cover"
+      className="sm:pb-28 pt-24 sm:pt-52 bg-no-repeat bg-cover"
       style={containerStyle}>
       {showModal &&
         createPortal(
@@ -54,10 +54,10 @@ export const Watch = () => {
         )}
       <section id="watch" className="container mx-auto">
         <img className="mx-auto" onClick={openModal} src={playIcon} alt="" />
-        <h2 className="sm:px-0 px-10 text-6xl py-14 text-white">
+        <h2 className="sm:px-0 px-10 font-light text-6xl py-14 text-white">
           Watch the best Technology <b>in Action</b>
         </h2>
-        <p className="sm:px-0 px-20 xl:w-6/12 xl:mx-auto text-2xl pb-24 text-white">
+        <p className="sm:px-0 px-20 font-light xl:w-6/12 xl:mx-auto text-2xl pb-24 text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget
           nunc vitae tellus luctus ullamcorper. Nam porttitor ullamcorper felis
           at convallis. Aenean ornare vestibulum nisi fringilla lacinia. Nullam

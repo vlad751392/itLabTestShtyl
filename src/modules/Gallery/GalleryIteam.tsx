@@ -9,7 +9,7 @@ interface Props {
 export const GalleryIteam: FC<Props> = ({ preview, title, description }) => {
   return (
     <article className="sm:w-2/5 lg:w-full group">
-      <section className="group mx-10 sm:mx-0 rounded-xl overflow-hidden">
+      <section className="group cursor-pointer mx-10 sm:mx-0 rounded-xl overflow-hidden">
         <section className="flex flex-col justify-center relative">
           <p className="group-hover:block text-3xl hidden z-10 absolute text-white self-center">
             +

@@ -5,7 +5,7 @@ import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { PopupProps } from './interfaces/PopupProps';
 
 export const Popup: FC<PopupProps> = (props) => {
-  const {  onClose, children } = props;
+  const { onClose, children } = props;
   const squareBoxRef = useRef<HTMLDivElement>(null);
   const clickOutsidehandler = () => {
     onClose();

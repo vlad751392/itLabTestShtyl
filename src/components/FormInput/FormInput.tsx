@@ -1,8 +1,5 @@
 import { FC } from 'react';
-import {
-  FieldValues,
-  UseFormRegister
-} from 'react-hook-form';
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 

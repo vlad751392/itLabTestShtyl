@@ -5,6 +5,7 @@ import cn from 'classnames';
 interface Props {
   open: boolean;
   showCloseAnimation: boolean;
+  handleClick: () => void;
 }
 
 const NAV = [
@@ -50,7 +51,7 @@ const NAV = [
   }
 ];
 
-const Navigation: FC<Props> = ({ open, showCloseAnimation }) => {
+const Navigation: FC<Props> = ({ open, showCloseAnimation, handleClick }) => {
   const [delayedOpen, setDelayedOpen] = useState(false);
 
   useEffect(() => {
@@ -81,7 +82,9 @@ const Navigation: FC<Props> = ({ open, showCloseAnimation }) => {
           <li
             key={id}
             className="text-white relative lg:h-full flex items-center text-base before:w-full before:absolute before:top-0 before:border-t-2 before:transition-all before:duration-300 before:ease-in before:border-transparent before:scale-x-0 before:block before:hover:border-blue-primary	before:hover:scale-x-100 hover:text-blue-primary hover:font-bold hover:transition-all hover:duration-300 hover:ease-in font-droid-sans">
-            <a href={`#${path}`}>{title}</a>
+            <a onClick={handleClick} href={`#${path}`}>
+              {title}
+            </a>
           </li>
         ))}
       </ul>

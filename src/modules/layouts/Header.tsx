@@ -33,6 +33,7 @@ export const Header = () => {
         <Navigation
           open={burgerState}
           showCloseAnimation={showCloseAnimation}
+          handleClick={handleClick}
         />
         <BurgerMenu burgerState={burgerState} handleClick={handleClick} />
       </div>
